@@ -2,7 +2,6 @@ var http = require('http');
 var url = require('url');
 var fileSystem = require('fs');
 
-
 http.createServer(function (request, response) {
   // Get pathname and remove leading /
   var pathName = url.parse(request.url).pathname;
