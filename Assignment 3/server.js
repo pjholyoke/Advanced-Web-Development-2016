@@ -2,11 +2,10 @@ var http = require('http');
 var url = require('url');
 var fileSystem = require('fs');
 
-
 http.createServer(function (request, response) {
   // Get pathname and remove leading /
   var pathName = url.parse(request.url).pathname;
-  var route = pathName.substr(1); /* lets remove the "/" from the name */
+  var route = pathName.substr(1);
   
   /* 
     Check to see if route matches todo, or index.
