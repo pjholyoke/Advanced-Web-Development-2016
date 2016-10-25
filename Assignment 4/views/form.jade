@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        title #{title}
+        link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/css/style.css', rel='stylesheet')
+    body
+      div(class="container-fluid")
+        div(class="row")
+          a(href="/") Index &mdash; 
+          a(href="/form") Form &mdash;
+          a(href="/about") About 
+          
+         h2= message
+         form.form(action="/form", method="post", role="form")
+                .form-group
+
+                  div(class="row")
+                  label.control-label(for="name") Name
+                    input#name.form-control(name="name")
+                  div(class="row")
+                  label.control-label(for="email") Email
+                    input#name.form-control(name="email")
+                  div(class="row")
+                    div(class="col-md-3")
+                      label.control-label(for="comments") Comments
+                      input#name.form-control(name="comments")
+
+                      input(type="submit" value="Add my review") 

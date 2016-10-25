@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title #{title}
+        link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/css/style.css', rel='stylesheet')
+    body
+      div(class="container-fluid")
+        div(class="row")
+          a(href="/") Index &mdash; 
+          a(href="/form") Form &mdash;
+          a(href="/about") About 
+        
+        div(class="row")
+          div(class="col-md-3 text-justify")
+            h1 Assignment 4 - Index Page
+            div!= lipsum

@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title #{title}
+        link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/css/style.css', rel='stylesheet')
+    body
+      div(class="container-fluid")
+        div(class="row")
+          a(href="/") Index &mdash; 
+          a(href="/form") Form &mdash;
+          a(href="/about") About 
+          
+          p
+            strong Name:  #{name}
+          p
+            strong Email: #{email}
+          p
+            strong Comments: #{comments}
+          p
+            a(href="./form") Back

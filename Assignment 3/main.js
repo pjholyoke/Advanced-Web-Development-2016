@@ -5,6 +5,7 @@
    Then Print it. 
  */
 var xhr = new XMLHttpRequest();
+
 xhr.open('GET', "http://localhost:3000/todo");
 xhr.onreadystatechange = function() {
   if (xhr.status === 200)  {
