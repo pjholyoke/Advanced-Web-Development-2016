@@ -1,0 +1,47 @@
+body {
+  background: #00d126;
+  color: #fff;
+}
+
+.title {
+  border-bottom: 3px solid white;
+  padding-bottom: .25em;
+  margin-bottom: .5em;
+}
+
+.btn-default {
+  background: #00d832;
+  color: white;
+}
+
+.panel-danger { border: 1px solid #d30000 !important; }
+
+.error.panel-heading {
+  background: #d30000 !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+
+#newEmployee > div.form-group.row.success > div > div.panel-heading {
+  background: #efdb00 !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+
+.panel-success.panel-heading {
+  background: #efdb00 !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+
+.panel-body {
+  color: #000;
+}
+
+.error, .success { display:none; }
+
+.col-md-12 { padding: 0px !important; }
+
+table th { background: #222; }
+table td:nth-child(even) { background: #ddd; color: #666; }
+table td:nth-child(odd) { background: #fff; color: #666; }

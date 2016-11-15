@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1(class="title") Employees
+  div(class="col-md-12")
+    table.table.table-bordered
+      thead
+        tr
+          th First name
+          th Last name
+          th Edit
+          th Delete
+      tbody
+        - each person in allResults
+          tr
+            td= person.firstName
+            td= person.lastName
+            td(class="text-center")
+              a(href="/update/"+person.id)
+                i(class="fa fa-pencil")
+            td(class="text-center")
+              a(href="/delete/"+person.id)
+                i(class="fa fa-times-circle")

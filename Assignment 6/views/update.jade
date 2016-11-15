@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  h1(class="title") Update Employee
+  //p User Data: #{userData}
+  div(class="row col-md-12 col-md-offset-0")
+    form(method="post", id="updateEmployee")
+      .form-group.row.error
+        .panel.panel-danger
+          button.close(type='button', data-target='#id_of_panel', data-dismiss='alert')
+            span(aria-hidden='true') ×
+            span.sr-only Close
+          .panel-heading Nope
+          .panel-body All fields are required. Please check them again.
+      .form-group.row.success
+        .panel.panel-success
+          button.close(type='button', data-target='#id_of_panel', data-dismiss='alert')
+            span(aria-hidden='true') ×
+            span.sr-only Close
+          .panel-heading Employee Updated!
+          .panel-body Employee was updated!
+      .form-group.row
+        label.col-xs-2.col-form-label(for='example-text-input') First Name
+        .col-xs-10
+          input#fname.form-control(type='text', name="fname", placeholder="First Name", value="#{userData.firstName}")
+      .form-group.row
+        label.col-xs-2.col-form-label(for='example-text-input') Last Name
+        .col-xs-10
+          input#lname.form-control(type='text', name="lname", placeholder="Last Name", value="#{userData.lastName}")
+      .form-group.row
+        label.col-xs-2.col-form-label(for='example-text-input') Department
+        .col-xs-10
+          input#dept.form-control(type='text', name="dept", placeholder="Department", value="#{userData.department}")
+      .form-group.row
+        label.col-xs-2.col-form-label(for='example-text-input') Start Date
+        .col-xs-10
+          //input#date.form-control(type='date', name="date", placeholder="Select a date")
+          input#date.form-control(type='text', name="date", placeholder="Select a date", value="#{date}")
+      .form-group.row
+        label.col-xs-2.col-form-label(for='example-text-input') Job Title
+        .col-xs-10
+          input#title.form-control(type='text', name="title", placeholder="Job Title", value="#{userData.jobTitle}")
+      .form-group.row
+        label.col-xs-2.col-form-label(for='example-text-input') Salary
+        .col-xs-10
+          input#salary.form-control(type='number', name="salary", placeholder="#", value="1337")
+      .form-group.row
+        .col-md-6
+          button(class="btn btn-default btn-block", id="update", type="submit") Update
+        .col-md-6
+          button(class="btn btn-default btn-block", id="cancel") Cancel
