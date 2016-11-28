@@ -5,7 +5,7 @@
 - ~~Assignment 4~~ - Node.js 2   [10/31]
 - ~~Assignment 5~~ - Simple api 
 - ~~Assignment 6~~   Adv. api
-- Assignment 7
+- ~~Assignment 7~~   AngularJS
 - Assignment 8
 - Assignment 9
 - Assignment 10
