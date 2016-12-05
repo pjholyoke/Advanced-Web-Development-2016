@@ -1,0 +1,38 @@
+<h1>Employee Table</h1>
+
+<div class="content">
+    
+    <h3>Search</h3>
+    <!-- https://docs.angularjs.org/api/ng/filter/filter -->
+    <input ng-model="searchText">
+    <br />
+    <br /> 
+    <p ng-class="{'msg' : vm.message.length}">{{vm.message}}</p>
+    <p><a href="#/create/">Add New Review</a></p>
+    <table class="gridtable">
+        <thead>
+            <tr>
+                <th>First</th>
+                <th>Last</th>                
+                <th>Dept.</th>                
+                <th>Start Date</th>                
+                <th>Title</th>
+                <th>Salary</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>    
+        
+        <tr ng-repeat="employee in vm.employees | filter:searchText">
+            <td>{{employee.firstName}}</td>                  
+            <td>{{employee.lastName}}</td>                  
+            <td>{{employee.department}}</td>                  
+            <td>{{employee.startDate.substring(0, 10)}}</td>                  
+            <td>{{employee.jobTitle}}</td>                  
+            <td>{{employee.salary}}</td>                  
+            <td><a ng-href="#/update/{{employee._id}}">Update</a></td>
+            <td><button ng-click="vm.deleteEmployee(employee._id)">Delete</button></td>
+        </tr>
+    </table>
+        
+</div>
